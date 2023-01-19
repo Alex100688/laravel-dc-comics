@@ -24,10 +24,10 @@
                         <td>{{ $comic->series }}</td>
                         <td>{{ $comic->sale_date }}</td>
                         <td>{{ $comic->type }}</td>
-                        <td><a href="{{ route('layouts.show', $comic->id) }}" class="btn btn-info">Premi qui</a>
+                        <td><a href="{{ route('comics.show', $comic->id) }}" class="btn btn-info">Premi qui</a>
                     </tr>
                 @endforeach
-                <a href="{{ route('layouts.create') }}">Premi qui</a>
+                <a href="{{ route('comics.create') }}">Premi qui</a>
             </tbody>
         </table>
     </div>
