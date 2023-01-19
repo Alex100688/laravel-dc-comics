@@ -12,6 +12,7 @@
                     <th scope="col">Data</th>
                     <th scope="col">Serie</th>
                     <th scope="col">Tipologia</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -19,14 +20,14 @@
                     <tr>
                         <td>{{ $comic->title }}</td>
                         <td>{{ $comic->description }}</td>
-                        <td>{{ $comic->thumb }}</td>
                         <td>{{ $comic->price }}</td>
                         <td>{{ $comic->series }}</td>
                         <td>{{ $comic->sale_date }}</td>
                         <td>{{ $comic->type }}</td>
+                        <td><a href="{{ route('layouts.show', $comic->id) }}" class="btn btn-info">Premi qui</a>
                     </tr>
                 @endforeach
-
+                <a href="{{ route('layouts.create') }}">Premi qui</a>
             </tbody>
         </table>
     </div>
