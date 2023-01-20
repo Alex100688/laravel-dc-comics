@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('layouts.main')
 @section('page-content')
     <div class="container">
         <h2>{{ $comic->title }}</h2>
