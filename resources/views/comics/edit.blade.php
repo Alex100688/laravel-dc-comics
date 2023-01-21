@@ -2,7 +2,7 @@
 @section('page-content')
     <div class="container">
         <h2>Modifica Fumetti</h2>
-        <form action="{{ route('comics.update', ['id' => $comic->id]) }}" method="POST">
+        <form action="{{ route('comics.update', $comic) }}" method="POST">
             @csrf
             @method('PUT')
             <div class="mb-3">
@@ -32,7 +32,7 @@
                 <label for="type" class="form-label">Tipologia</label>
                 <input type="text" class="form-control" id="type" name="type" value="{{ $comic->type }}">
             </div>
-            <button type="submit" class="btn btn-warning">Modifica</button>
+            <button type="submit"class="btn btn-warning">Modifica</button>
         </form>
     </div>
 @endsection

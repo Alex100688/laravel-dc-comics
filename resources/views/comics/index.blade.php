@@ -7,7 +7,7 @@
                 <tr>
                     <th scope="col">Titolo</th>
                     <th scope="col">Descrizione</th>
-                    <th scope="col">Prezo</th>
+                    <th scope="col">Prezzo</th>
                     <th scope="col">Serie</th>
                     <th scope="col">Data</th>
                     <th scope="col">Serie</th>
@@ -25,9 +25,12 @@
                         <td>{{ $comic->sale_date }}</td>
                         <td>{{ $comic->type }}</td>
                         <td><a href="{{ route('comics.show', $comic->id) }}" class="btn btn-info">Premi qui</a>
+                            <a href="{{ route('comics.edit', $comic->id) }}"class="btn btn-success">Modica il form</a>
+                        </td>
                     </tr>
                 @endforeach
                 <a href="{{ route('comics.create') }}">Premi qui</a>
+
             </tbody>
         </table>
     </div>
