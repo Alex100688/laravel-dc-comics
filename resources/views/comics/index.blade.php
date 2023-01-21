@@ -10,7 +10,6 @@
                     <th scope="col">Prezzo</th>
                     <th scope="col">Serie</th>
                     <th scope="col">Data</th>
-                    <th scope="col">Serie</th>
                     <th scope="col">Tipologia</th>
 
                 </tr>
