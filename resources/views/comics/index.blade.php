@@ -20,13 +20,13 @@
                     <tr>
                         <td>{{ $comic->title }}</td>
                         <td>{{ $comic->description }}</td>
-                        <td>{{ $comic->price }}</td>
+                        <td>{{ $comic->price }}€</td>
                         <td>{{ $comic->series }}</td>
                         <td>{{ $comic->sale_date }}</td>
                         <td>{{ $comic->type }}</td>
-                        <td><a href="{{ route('comics.show', $comic->id) }}" class="btn btn-info">Premi qui</a>
-                            <a href="{{ route('comics.edit', $comic->id) }}"class="btn btn-success">Modica il form</a>
-                        </td>
+                        <td><a href="{{ route('comics.show', $comic->id) }}" class="btn btn-info">Premi qui</a> </td>
+
+                        <td><a href="{{ route('comics.edit', $comic->id) }}"class="btn btn-success">Modica</a></td>
                     </tr>
                 @endforeach
                 <a href="{{ route('comics.create') }}">Premi qui</a>
