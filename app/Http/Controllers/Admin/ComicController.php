@@ -38,6 +38,14 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'title'=> 'required| string| max:50',
+            'description'=> 'required|string|max:100',
+            'price' => 'required| decimal:2| between:1, 99',
+            'series'=> 'required | string| max:50',
+            'sale_date'=> 'required |date',
+            'type'=> 'required |string| max:20'
+        ]);
         $data = $request->all();
         $new_comic = new Comic();
         $new_comic->fill($data);
@@ -77,6 +85,15 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+        
+        $request->validate([
+            'title'=> 'required| string| max:50',
+            'description'=> 'required|string|max:100',
+            'price' => 'required| decimal:2| between:1, 99',
+            'series'=> 'required | string| max:50',
+            'sale_date'=> 'required |date',
+            'type'=> 'required |string| max:20'
+        ]);
         $data = $request->all();
         $comic->update($data);
         return redirect()->route('comics.index');
